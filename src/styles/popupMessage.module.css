@@ -1,0 +1,58 @@
+.messageUpdateDeviceChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background-color: var(--color-white);
+  width: 606px;
+  height: 255px;
+}
+.areYouSure,
+.pleaseConfirm {
+  position: absolute;
+  height: 62px;
+}
+.pleaseConfirm {
+  top: 31px;
+  left: 141px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 324px;
+}
+.areYouSure {
+  top: 93px;
+  left: 58px;
+  font-size: 18px;
+  display: inline-block;
+  width: 512px;
+}
+.cancel,
+.update {
+  position: absolute;
+  top: 0;
+  left: 203.1px;
+}
+.cancel {
+  left: 0;
+  cursor: pointer;
+}
+.searchButton {
+  position: absolute;
+  top: 163px;
+  left: 125px;
+  width: 363.1px;
+  height: 56.4px;
+}
+.messageUpdateDevice {
+  position: relative;
+  width: 606px;
+  height: 255px;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  text-align: center;
+  font-size: 24px;
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

@@ -1,0 +1,110 @@
+.table{
+  position: absolute;
+  top: 450px;
+  left: 95.9px;
+}
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--color-white);
+  width: 1440px;
+  height: 459px;
+}
+.deviceManagement {
+  position: absolute;
+  top: 264.1px;
+  left: 95.9px;
+  font-size: 40px;
+  font-weight: 800;
+}
+.addDevice {
+  position: absolute;
+  top: 257px;
+  left: 857px;
+}
+.editDevice {
+  position: absolute;
+  top: 257px;
+  left: 1105px;
+}
+
+.search {
+  position:absolute;
+  border: 0;
+  background-color: transparent;
+  top: 350px;
+  left: 95px;
+}
+.dashboard {
+  cursor: pointer;
+  position: absolute;
+  left:0px;
+}
+.log {
+  cursor: pointer;
+  position: absolute;
+  left:188px;
+}
+.tenant {
+  font-weight: 800;
+  position: absolute;
+  left: 288px;
+}
+.devices {
+  cursor: pointer;
+  position: absolute;
+  left: 427px;
+}
+.navigationBar {
+  position: absolute;
+  top: 168px;
+  left: 462.5px;
+  width: 515px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.userChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: var(--color-darkslategray);
+  width: 60.8px;
+  height: 60.8px;
+}
+.admin,
+.mangUjang {
+  position: absolute;
+  top: 32.7px;
+  left: 86px;
+}
+.mangUjang {
+  top: 3px;
+  font-size: 22.44px;
+  font-weight: 800;
+  display: inline-block;
+  width: 293px;
+}
+.user {
+  position: absolute;
+  top: 50px;
+  left: 95px;
+  width: 216px;
+  height: 60.8px;
+  font-size: var(--font-size-lg-7);
+}
+.deviceManagementPage {
+  position: relative;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 1667px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 22.44px;
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}

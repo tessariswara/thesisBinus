@@ -1,0 +1,129 @@
+.save {
+  position: absolute;
+  top: 0;
+  left: 248px;
+  cursor: pointer;
+}
+.cancel {
+  top: 0;
+  left: 126.1px;
+  cursor: pointer;
+}
+
+.button {
+  position: absolute;
+  top: 698px;
+  left: 296px;
+  width: 356.4px;
+  height: 56.4px;
+}
+.descriptionChild {
+  border: 0;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 27.6px;
+  left: 1.6px;
+}
+.description {
+  position: absolute;
+  top: 521px;
+  left: 44px;
+  width: 607.5px;
+  height: 78.9px;
+}
+.plantLocation {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.parent,
+.plantLocaton {
+  position: absolute;
+  top: 27.3px;
+  left: 1.6px;
+}
+.plantLocaton {
+  top: 419px;
+  left: 46px;
+  width: 607.5px;
+  height: 79px;
+}
+.machineChild {
+  border: 0;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 27px;
+  left: 1.6px;
+}
+.machine {
+  position: absolute;
+  top: 316px;
+  left: 44px;
+  width: 607.5px;
+  height: 78.3px;
+}
+.deviceName1,
+.deviceNameChild {
+  position: absolute;
+  top: 0;
+  left: 0.4px;
+}
+.deviceNameChild {
+  border: 0;
+  background-color: #FFFFFF;
+  top: 29.7px;
+  left: 0;
+}
+.deviceName {
+  position: absolute;
+  top: 211px;
+  left: 45px;
+  width: 605.9px;
+  height: 81px;
+}
+.serialNumberChild {
+  border: 0;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 29.4px;
+  left: 1.6px;
+}
+.serialNumber {
+  position: absolute;
+  top: 109.6px;
+  left: 44px;
+  width: 607.5px;
+  height: 78.3px;
+}
+.group,
+.serialNumber {
+  position: absolute;
+  top: 29.4px;
+  left: 1.6px;
+}
+.serialNumber {
+  top: 109.6px;
+  left: 44.4px;
+  width: 609.3px;
+  height: 80.7px;
+}
+.addDevice {
+  position: absolute;
+  top: 44.4px;
+  left: calc(50% - 83.5px);
+  font-size: 30.42px;
+  text-align: center;
+}
+.deviceManagementSave {
+  position: relative;
+  background-color: #d0d0d0;
+  width: 695px;
+  height: 803px;
+  overflow: auto;
+  max-width: 100%;
+  max-height: 100%;
+  text-align: left;
+  font-size: 15.21px;
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
