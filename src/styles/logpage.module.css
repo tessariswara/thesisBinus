@@ -13,6 +13,21 @@
   font-size: 40px;
   font-weight: 800;
 }
+.buttonDownload {
+  position: absolute;
+  top: 360px;
+  left: 1105px;
+}
+.list {
+  position: absolute;
+  top: 360px;
+  left: 96px;
+}
+.chart {
+  position: absolute;
+  top: 576px;
+  left: 85px;
+}
 
 .dashboard {
   cursor: pointer;

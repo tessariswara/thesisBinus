@@ -5,6 +5,7 @@ import NotFound from "../pages/notFound";
 const TenantManagement = React.lazy(() => import("../pages/tenantManagement"));
 const DeviceManagement = React.lazy(() => import("../pages/deviceManagement"));
 const Log = React.lazy(() => import("../pages/log"));
+const Playground = React.lazy(() => import("../pages/playground"));
 const ProjectRoutes = () => {
   return (
     <React.Suspense fallback={<></>}>
@@ -13,6 +14,7 @@ const ProjectRoutes = () => {
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/log" element={<Log />} />
+          <Route path="/playground" element={<Playground />} />
           <Route path="/tenantmanagement" element={<TenantManagement />} />
           <Route path="/devicemanagement" element={<DeviceManagement />} />
         </Routes>
