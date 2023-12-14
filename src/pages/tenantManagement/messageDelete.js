@@ -12,7 +12,7 @@ const MessageUpdateDevice = ({ onClose }) => {
       <div className={styles.messageUpdateDeviceChild} />
       <b className={styles.pleaseConfirm}>Please Confirm</b>
       <div className={styles.areYouSure}>
-        Are you sure want to delete this serial number? This action cannot be undone.
+        Are you sure want to delete this plant location? This action cannot be undone.
       </div>
       <div className={styles.searchButton}>
         <Button

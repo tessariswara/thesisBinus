@@ -1,10 +1,11 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import {
   Button,
   TextField,
   InputAdornment,
   Icon,
   IconButton,
+  Dialog
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import {
@@ -14,6 +15,9 @@ import {
 } from '@mui/x-data-grid';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import styles from "../../styles/tmpage.module.css";
+import TenantManagementEdit from "./editTenant.js";
+import TenantManagementSave from "./saveTenant.js";
+
 
 const columns: GridColDef[] = [
   { field: 'plantLocation', headerName: 'Plant Location', width: 250, headerClassName: 'super-app-theme--header', },
@@ -31,13 +35,62 @@ const rows = [
 
 const TenantManagement = () => {
   const navigate = useNavigate();
+  const [open, setOpen] = useState(false);
+  const [dialogType, setDialogType] = useState('');
+  const handleClickOpen = (type) => {
+    setDialogType(type);
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    setDialogType('');
+  };
+
+  const renderDialog = () => {
+    switch (dialogType) {
+      case 'add':
+        return (
+          <Dialog open={open} onClose={handleClose}
+            sx={{
+              "& .MuiDialog-container": {
+                "& .MuiPaper-root": {
+                  width: "100%",
+                  maxWidth: "695px",
+                },
+              },
+            }}
+          >
+            <TenantManagementSave onClose={handleClose}/>
+          </Dialog>
+       );
+      case 'edit':
+        return (
+          <Dialog open={open} onClose={handleClose}
+            sx={{
+              "& .MuiDialog-container": {
+                "& .MuiPaper-root": {
+                  width: "100%",
+                  maxWidth: "695px",
+                },
+              },
+            }}
+          >
+            <TenantManagementEdit onClose={handleClose}/>
+          </Dialog>
+        );
+      default:
+        return null;
+    }
+  };
+
   const onDashboardClick = useCallback(() => {
     navigate("/")
   }, [navigate]);
 
   const onLogClick = useCallback(() => {
-    // Please sync "Home page" to the project
-  }, []);
+    navigate("/log")
+  }, [navigate]);
 
   const onDeviceClick = useCallback(() => {
     navigate("/devicemanagement");
@@ -66,7 +119,7 @@ const TenantManagement = () => {
         />
       </div>
       <div className={styles.background} />
-      <div className={styles.deviceManagement}>Device Management</div>
+      <div className={styles.deviceManagement}>Tenant Management</div>
       <Button
         className={styles.editDevice}
         sx={{
@@ -76,6 +129,7 @@ const TenantManagement = () => {
 		position: "absolute"
         }}
         variant="contained"
+        onClick={() => handleClickOpen('edit')}
       >
         Edit Device
       </Button>
@@ -88,9 +142,13 @@ const TenantManagement = () => {
 		position: "absolute"
         }}
         variant="contained"
+        onClick={() => handleClickOpen('add')}
       >
         Add Device
       </Button>
+      <Dialog open={open} onClose={handleClose}>
+        {renderDialog()}
+      </Dialog>
       <TextField
         className={styles.search}
         color="primary"
@@ -106,7 +164,11 @@ const TenantManagement = () => {
         >
           Dashboard
         </a>
-        <a className={styles.log} onClick={onLogClick}>
+        <a
+           className={styles.log}
+           to="/log"
+           onClick={onLogClick}
+        >
           Log
         </a>
         <a className={styles.tenant}>Tenant </a>

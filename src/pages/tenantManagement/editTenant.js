@@ -8,11 +8,11 @@ import {
   FormControl,
   Dialog
 } from "@mui/material";
-import styles from "../../styles/dmPagesEdit.module.css";
+import styles from "../../styles/tmPagesEdit.module.css";
 import MessageUpdateDevice from "./messageUpdate.js";
 import MessageDeleteDevice from "./messageDelete.js";
 
-const DeviceManagementEdit = ({ onClose }) => {
+const TenantManagementEdit = ({ onClose }) => {
 
   const [open, setOpen] = useState(false);
   const [dialogType, setDialogType] = useState('');
@@ -72,7 +72,7 @@ const DeviceManagementEdit = ({ onClose }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={styles.deviceManagementEdit}
+      className={styles.tenantManagementEdit}
     >
       <div className={styles.button}>
         <Button
@@ -107,7 +107,7 @@ const DeviceManagementEdit = ({ onClose }) => {
         </Dialog>
       </div>
       <div className={styles.description}>
-        <div className={styles.plantLocation}>Description</div>
+        <div className={styles.description1}>Description</div>
         <TextField
           className={styles.descriptionChild}
           color="primary"
@@ -115,38 +115,17 @@ const DeviceManagementEdit = ({ onClose }) => {
           variant="outlined"
         />
       </div>
-      <div className={styles.plantLocaton}>
-        <div className={styles.plantLocation}>Plant Location</div>
-        <FormControl
-          className={styles.parent}
-          sx={{ width: 605.9, backgroundColor: "#FFFFFF" }}
-          variant="outlined"
-        >
-          <InputLabel color="primary" />
-          <Select color="primary" size="2x" />
-          <FormHelperText />
-        </FormControl>
-      </div>
-      <div className={styles.machine}>
-        <div className={styles.plantLocation}>Machine</div>
+      <div className={styles.address}>
+        <div className={styles.address1}>Address</div>
         <TextField
-          className={styles.machineChild}
+          className={styles.addressChild}
           color="primary"
           sx={{ width: 605.9, backgroundColor: "#FFFFFF" }}
           variant="outlined"
         />
       </div>
-      <div className={styles.deviceName}>
-        <div className={styles.deviceName1}>Device Name</div>
-        <TextField
-          className={styles.deviceNameChild}
-          color="primary"
-          sx={{ width: 605.9, backgroundColor: "#FFFFFF" }}
-          variant="outlined"
-        />
-      </div>
-      <div className={styles.serialNumber}>
-        <div className={styles.plantLocation}>Serial Number</div>
+      <div className={styles.plantLocation}>
+        <div className={styles.plantLocation1}>Plant Location</div>
         <FormControl
           className={styles.group}
           sx={{ width: 607.6, backgroundColor: "#FFFFFF" }}
@@ -157,10 +136,9 @@ const DeviceManagementEdit = ({ onClose }) => {
           <FormHelperText />
         </FormControl>
       </div>
-      <b className={styles.editDevice}>Edit Device</b>
+      <b className={styles.editTenant}>Edit Tenant</b>
     </form>
   );
 };
 
-export default DeviceManagementEdit;
-
+export default TenantManagementEdit;

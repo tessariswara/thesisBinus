@@ -12,7 +12,7 @@ const MessageUpdateDevice = ({ onClose }) => {
       <div className={styles.messageUpdateDeviceChild} />
       <b className={styles.pleaseConfirm}>Please Confirm</b>
       <div className={styles.areYouSure}>
-        Are you sure want to update this serial number?
+        Are you sure want to update this plant location?
       </div>
       <div className={styles.searchButton}>
         <Button

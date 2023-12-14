@@ -14,13 +14,13 @@ import {
   GridValueGetterParams
 } from '@mui/x-data-grid';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import styles from "../../styles/homepage.module.css";
+import styles from "../../styles/logpage.module.css";
 
 const Log = () => {
 
   const navigate = useNavigate();
-  const onLogClick = useCallback(() => {
-    navigate("/log")
+  const onDashboardClick = useCallback(() => {
+    navigate("/")
   }, [navigate]);
 
   const onTenantClick = useCallback(() => {
@@ -32,18 +32,18 @@ const Log = () => {
   }, [navigate]);
 
   return (
-    <div className={styles.homePage}>
+    <div className={styles.logPage}>
       <div className={styles.background} />
-      <div className={styles.home}></div>
+      <div className={styles.log}>Log Data</div>
       <div className={styles.navigationBar}>
-        <a className={styles.dashboard} >Dashboard</a>
         <a
-           className={styles.log}
-           to="/log"
-           onClick={onLogClick}
+           className={styles.dashboard}
+           to="/"
+           onClick={onDashboardClick}
         >
-          Log
+          Dashboard
         </a>
+        <a className={styles.logNavigation}>Log</a>
         <a
            className={styles.tenant}
            to="/tenantmanagement"

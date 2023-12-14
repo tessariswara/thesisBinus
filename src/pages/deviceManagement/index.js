@@ -95,8 +95,8 @@ const DeviceManagement = () => {
   }, [navigate]);
 
   const onLogClick = useCallback(() => {
-    // Please sync "Home page" to the project
-  }, []);
+    navigate("/log")
+  }, [navigate]);
 
   const onTenantClick = useCallback(() => {
     navigate("/tenantManagement")
@@ -170,7 +170,11 @@ const DeviceManagement = () => {
         >
           Dashboard
         </a>
-        <a className={styles.log} onClick={onLogClick}>
+        <a
+           className={styles.log}
+           to="/log"
+           onClick={onLogClick}
+        >
           Log
         </a>
         <a

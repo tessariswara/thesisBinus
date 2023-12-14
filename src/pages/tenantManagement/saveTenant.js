@@ -8,10 +8,10 @@ import {
   FormControl,
   Dialog
 } from "@mui/material";
-import styles from "../../styles/dmPagesSave.module.css";
+import styles from "../../styles/tmPagesSave.module.css";
 import MessageSaveDevice from "./messageSave.js";
 
-const DeviceManagementSave = ({ onClose }) => {
+const TenantManagementSave = ({ onClose }) => {
 
   const [open, setOpen] = useState(false);
   const [dialogType, setDialogType] = useState('');
@@ -32,7 +32,7 @@ const DeviceManagementSave = ({ onClose }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className={styles.deviceManagementSave}
+      className={styles.tenantManagementSave}
     >
       <div className={styles.button}>
         <Button
@@ -67,7 +67,7 @@ const DeviceManagementSave = ({ onClose }) => {
         </Dialog>
       </div>
       <div className={styles.description}>
-        <div className={styles.plantLocation}>Description</div>
+        <div className={styles.description1}>Description</div>
         <TextField
           className={styles.descriptionChild}
           color="primary"
@@ -75,48 +75,27 @@ const DeviceManagementSave = ({ onClose }) => {
           variant="outlined"
         />
       </div>
-      <div className={styles.plantLocaton}>
-        <div className={styles.plantLocation}>Plant Location</div>
-        <FormControl
-          className={styles.parent}
-          sx={{ width: 605.9, backgroundColor: "#FFFFFF" }}
-          variant="outlined"
-        >
-          <InputLabel color="primary" />
-          <Select color="primary" size="2x" />
-          <FormHelperText />
-        </FormControl>
-      </div>
-      <div className={styles.machine}>
-        <div className={styles.plantLocation}>Machine</div>
+      <div className={styles.address}>
+        <div className={styles.address1}>Address</div>
         <TextField
-          className={styles.machineChild}
+          className={styles.addressChild}
           color="primary"
           sx={{ width: 605.9, backgroundColor: "#FFFFFF" }}
           variant="outlined"
         />
       </div>
-      <div className={styles.deviceName}>
-        <div className={styles.deviceName1}>Device Name</div>
+      <div className={styles.plantLocation}>
+        <div className={styles.plantLocation1}>Plant Location</div>
         <TextField
-          className={styles.deviceNameChild}
+          className={styles.plantLocationChild}
           color="primary"
           sx={{ width: 605.9, backgroundColor: "#FFFFFF" }}
           variant="outlined"
         />
       </div>
-      <div className={styles.serialNumber}>
-        <div className={styles.plantLocation}>Serial Number</div>
-        <TextField
-          className={styles.serialNumberChild}
-          color="primary"
-          sx={{ width: 605.9, backgroundColor: "#FFFFFF" }}
-          variant="outlined"
-        />
-      </div>
-      <b className={styles.addDevice}>Add New Device</b>
+      <b className={styles.addTenant}>Add New Plant Location</b>
     </form>
   );
 };
 
-export default DeviceManagementSave;
+export default TenantManagementSave;
